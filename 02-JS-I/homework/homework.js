@@ -16,7 +16,7 @@ const nuevaResta = 10 - 5 === 5;
 const nuevaMultiplicacion = 10 * 4 === 40 ;
 
 // Resuelve el siguiente problema matemático:
-const nuevoModulo = 21 % 5 === 2;
+const nuevoModulo = 21 % 5 === 2 ;
 
 
 // En los próximos 22 problemas, deberás completar la función.
@@ -114,10 +114,10 @@ function esPar(num) {
   // De lo contrario, devuelve "false"
   // Tu código:
   if (num % 2 === 0){
-    return true
+    return true;
   }
   else{
-    return false
+    return false;
   }
 }
 
@@ -125,7 +125,12 @@ function esImpar(num) {
   // Devuelve "true" si "num" es impar
   // De lo contrario, devuelve "false"
   // Tu código:
-
+  if(num % 2 > 0){
+    return true;
+  }
+else{
+  return false;
+}
 }
 
 function elevarAlCuadrado(num) {
@@ -201,7 +206,7 @@ function obtenerSaludo(nombre) {
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
   // "Martin" -> "Hola Martin!"
   // Tu código:
-  return "Hola " + nombre
+  return "Hola " + nombre + "!"
 }
 
 function obtenerAreaRectangulo(alto, ancho) {
@@ -221,7 +226,8 @@ function retornarPerimetro(lado){
 function areaDelTriangulo(base, altura){
   //Desarrolle una función que calcule el área de un triángulo.
   //Escribe tu código aquí
-  return base * altura
+  var area = base * altura
+  return area
 }
 
 
@@ -229,7 +235,8 @@ function deEuroAdolar(euro){
   //Supongamos que 1 euro equivale a 1.20 dólares. Escribe un programa que reciba
   //como parámetro un número de euros y calcule el cambio en dólares.
   //Escribe tu código aquí
-  return euro * 1,2
+  var numfinal = euro * 1.20
+  return numfinal
 }
 
 
@@ -239,6 +246,15 @@ function esVocal(letra){
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
+  if(letra.lenght > 1){
+    return "Dato incorrecto";
+  }
+  else if(letra === "a"||letra === "A"||letra === "e"||letra === "E"||letra ==="i"||letra === "I"||letra ==="o"||letra ==="O"||letra === "u"||letra ==="U"){
+    return "Es vocal";
+  }
+  else{
+    return "Dato incorrecto"
+  }
 }
 
 
